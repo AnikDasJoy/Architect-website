@@ -74,12 +74,123 @@ body {
     width: 100%;
 }
 
+.text-primary {
+    color: #FF900E;
+}
+
+.text-light-gray {
+    color: #727272;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main>section {
+    margin-top: 130px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.teams {
+    align-items: center;
+}
+
+.team-image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.our-features {
+    margin-left: 130px;
+    max-width: 530px;
+}
+
+.features {
+    gap: 120px;
+}
+
+#quick-list {
+    font-weight: 500;
+}
+
+#feature-section-title {
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.featured-card {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+}
+
+.feature-card .feature-title {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.experience-badge {
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+#experience-year {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.featured-architect img {
+    width: 100%;
+    padding-top: 90px;
+}
 
 /* responsive media query */
 @media screen and (max-width: 576px) {
 
     .navbar,
-    .nav-links {
+    .nav-links,
+    .teams,
+    .features {
         flex-direction: column;
+    }
+
+    .team-image-container {
+        grid-template-columns: 1fr;
+    }
+
+    .our-features {
+        margin-left: 20px;
+    }
+
+    .experience-badge {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+
+    .teams,
+    .features {
+        flex-direction: column;
+    }
+
+    .our-features {
+        margin: 50px auto;
+    }
+
+    #experience-badge {
+        margin-top: 20px;
+        margin-left: 20px;
     }
 }
